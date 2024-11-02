@@ -1,0 +1,40 @@
+.product-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    min-width: 0;
+    min-height: 0;
+}
+
+.product-card-text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    color: var(--text-main-color);
+}
+
+.product-image {
+    width: 12.5rem;
+    height: 16.25rem;
+    border-radius: 1rem;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.product-price {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0;
+    cursor: pointer;
+}
+
+.product-title {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.cart-button-text {
+    font-weight: 600;
+    font-size: 14px;
+}

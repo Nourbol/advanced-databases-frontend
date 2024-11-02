@@ -1,0 +1,8 @@
+.catalog-container {
+    display: grid;
+    grid-template-columns: repeat(6, min-content);
+    row-gap: 2.5rem;
+    column-gap: 1.875rem;
+    justify-content: space-between;
+    grid-auto-flow: row dense;
+}
