@@ -1,3 +1,11 @@
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    cursor: pointer;
+}
+
 .text-button {
     background-color: var(--primary-color);
     color: var(--main-color);
@@ -26,4 +34,14 @@
     background-color: var(--secondary-color);
     padding: 0.5rem;
     cursor: pointer;
+}
+
+.like-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.75rem;
+    background-color: var(--secondary-color);
+    padding: 0.5rem;
+    border: 1px solid var(--neutral-color);
 }

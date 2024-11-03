@@ -1,10 +1,10 @@
 import {Layout} from "./components/layout/Layout.tsx";
-import {MainPage} from "./pages/MainPage.tsx";
+import {ProductPage} from "./pages/ProductPage.tsx";
 
 function App() {
   return (
       <Layout>
-          <MainPage />
+          <ProductPage />
       </Layout>
   );
 }

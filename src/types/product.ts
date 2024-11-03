@@ -3,4 +3,4 @@ export type ProductPreview = {
     title: string;
     price: number;
     imageUrl: string;
-}
+};

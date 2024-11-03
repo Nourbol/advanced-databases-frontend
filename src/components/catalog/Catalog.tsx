@@ -1,5 +1,5 @@
 import {ProductPreview} from "../../types/product.ts";
-import {ProductCard} from "../product-card/ProductCard.tsx";
+import {ProductPreviewCard} from "../product/ProductPreviewCard.tsx";
 import './Catalog.css';
 
 type PropsType = {
@@ -9,7 +9,7 @@ type PropsType = {
 export const Catalog = ({products}: PropsType) => (
     <div className="catalog-container">
         {products.map((product) => (
-            <ProductCard key={product.id} product={product}/>
+            <ProductPreviewCard key={product.id} product={product}/>
         ))}
     </div>
 );

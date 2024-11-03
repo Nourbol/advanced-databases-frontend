@@ -1,0 +1,79 @@
+.detailed-product-card {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+.product-image {
+    width: 31.25rem;
+    border-radius: 1rem;
+    object-fit: cover;
+}
+
+.product-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+    align-items: stretch;
+}
+
+.product-title {
+    font-size: 24px;
+    font-weight: 700;
+    overflow: hidden;
+    word-break: break-word;
+    line-height: 1.25;
+}
+
+.product-additional-info {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+.product-description {
+    font-size: 14px;
+    line-height: 1.425;
+    font-weight: 400;
+}
+
+.product-action-container {
+    display: flex;
+    flex-direction: column;
+    padding: 1.25rem;
+    box-shadow: 0 1.25rem 0.75rem -1rem rgba(0,30,85,.1),0 0.5rem 1.5rem 1.125rem rgba(0,30,85,.05);
+    border-radius: 1.25rem;
+    margin-top: auto;
+    gap: 1rem;
+}
+
+.product-price {
+    font-size: 30px;
+    line-height: 1.25;
+    font-weight: 700;
+}
+
+.product-action-button-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.buy-button {
+    font-weight: 500;
+    font-size: 16px;
+    background-color: var(--primary-color);
+    color: var(--main-color);
+    width: 100%;
+    padding: 0.9rem 1.5rem;
+    border: none;
+    border-radius: 0.75rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+}

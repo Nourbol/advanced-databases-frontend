@@ -1,13 +1,7 @@
 import './Button.css';
-import React, {ReactNode} from "react";
+import React from "react";
 
-type PropsType = {
-    children: ReactNode,
-    onClick?: React.MouseEventHandler<HTMLButtonElement>,
-};
-
-export const Button = ({children, onClick = () => {}}: PropsType) => (
-    <button className="text-button" onClick={onClick}>
-        {children}
-    </button>
+export const Button =
+    (props: React.ButtonHTMLAttributes<HTMLButtonElement>) => (
+    <button className="text-button" {...props} />
 );
