@@ -7,6 +7,7 @@
     border-bottom: 1px solid var(--neutral-color);
     position: sticky;
     top: 0;
+    gap: 1.5rem;
 }
 
 .header-left-container {
@@ -17,6 +18,34 @@
     gap: 0.75rem;
 }
 
+.header-right-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    gap: 0.75rem;
+}
+
 .logo {
     width: 6rem;
+}
+
+.user-card-wrapper {
+    position: absolute;
+    top: 4.75rem;
+    right: 0;
+}
+
+.header-user-logo {
+    width: 2.5rem;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.header-user-logo:hover {
+    box-shadow: 0 1.25rem 0.75rem -1rem rgba(0,30,85,.1),0 0.5rem 1.5rem 1.125rem rgba(0,30,85,.05);
+}
+
+.login-button {
+    width: fit-content;
 }

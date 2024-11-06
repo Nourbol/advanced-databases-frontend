@@ -8,6 +8,11 @@ type PropsType = {
     description: string,
     price: number,
     quantity: number,
+    category: {
+        id: string,
+        name: string,
+    },
+    onCategoryClick?: (id: string) => void,
 };
 
 export const DetailedProductCard =
@@ -16,13 +21,15 @@ export const DetailedProductCard =
          description,
          quantity,
          price,
-         title
+         title,
+         category,
+         onCategoryClick = () => {},
     }: PropsType) => {
     return (
         <div className="detailed-product-card">
-            <img src={imageUrl} alt={title} className="product-image"/>
+            <img src={`http://localhost:8080${imageUrl}`} alt={title} className="product-image"/>
             <div className="product-content">
-                <p className="product-title">{title}</p>
+                <p className="product-title">{title} | <a onClick={() => onCategoryClick(category.id)}>{category.name}</a></p>
                 <p className="product-additional-info">{quantity} left | 0 likes</p>
                 <p className="product-description">{description}</p>
                 <div className="product-action-container">

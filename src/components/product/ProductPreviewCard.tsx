@@ -10,7 +10,7 @@ type PropsType = {
 
 export const ProductPreviewCard = ({product, onClick = () => {}}: PropsType) => (
     <div className="product-preview-card">
-        <img src={product.imageUrl}
+        <img src={`http://localhost:8080${product.imageUrl}`}
              alt={product.title} className="product-preview-image"
              onClick={() => onClick(product)}
         />

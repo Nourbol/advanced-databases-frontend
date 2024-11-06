@@ -1,20 +1,22 @@
 import {Catalog} from "../components/catalog/Catalog.tsx";
-import {ProductPreview} from "../types/product.ts";
 import {useEffect, useState} from "react";
+import {ProductPreview} from "../types/product.ts";
+import {useNavigate, useSearchParams} from "react-router-dom";
 import {searchProducts} from "../service/products.ts";
-import {useNavigate} from "react-router-dom";
 
-export const MainPage = () => {
+export const SearchProductsPage = () => {
     const [products, setProducts] = useState<ProductPreview[]>([]);
     const navigate = useNavigate();
+    const [parameters] = useSearchParams();
 
     const handleProductClick = (product: ProductPreview) => {
         navigate(`/product/${product.id}`);
     };
 
     useEffect(() => {
-        searchProducts().then(response => setProducts(response));
-    }, []);
+        const query = parameters.get('query');
+        searchProducts(query || undefined).then(response => setProducts(response));
+    }, [parameters]);
 
     return (
         <div className="page">

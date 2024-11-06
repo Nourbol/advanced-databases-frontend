@@ -1,15 +1,26 @@
 import {DetailedProductCard} from "../components/product/DetailedProductCard.tsx";
+import {useParams} from "react-router-dom";
+import {useEffect, useState} from "react";
+import {Product} from "../types/product.ts";
+import {getProduct} from "../service/products.ts";
 
 export const ProductPage = () => {
+    const { productId } = useParams();
+    const [product, setProduct] = useState<Product | null>(null);
+
+    useEffect(() => {
+        if (productId) {
+            getProduct(productId).then(response => setProduct(response));
+        }
+    }, [productId]);
+
+    if (!product) {
+        return null;
+    }
+
     return (
         <div className="page">
-            <DetailedProductCard
-                imageUrl="https://ir-3.ozone.ru/s3/multimedia-1-k/wc1000/6979674908.jpg"
-                title="Macbook Air"
-                description="Apple"
-                price={1500000}
-                quantity={50}
-            />
+            <DetailedProductCard {...product} />
         </div>
     );
 };

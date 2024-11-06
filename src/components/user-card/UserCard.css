@@ -1,0 +1,9 @@
+.user-card {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 1.25rem 0.75rem -1rem rgba(0,30,85,.1),0 0.5rem 1.5rem 1.125rem rgba(0,30,85,.05);
+    min-width: 10vw;
+    padding: 1.5rem 2rem;
+    border-radius: 1.25rem;
+    gap: 0.75rem;
+}
