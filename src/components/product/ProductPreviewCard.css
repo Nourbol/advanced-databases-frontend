@@ -20,6 +20,11 @@
     cursor: pointer;
 }
 
+.product-preview-image:hover {
+    box-shadow: 0 1.25rem 0.75rem -1rem rgba(0,30,85,.1);
+    filter: brightness(90%);
+}
+
 .product-preview-price {
     font-size: 18px;
     font-weight: 700;

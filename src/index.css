@@ -25,6 +25,11 @@ p {
   margin: 0;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .page {
   padding: 1.5rem 2rem 3rem 2rem;
   margin: 0 auto;

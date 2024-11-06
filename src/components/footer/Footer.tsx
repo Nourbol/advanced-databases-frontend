@@ -1,7 +1,8 @@
 import './Footer.css'
+import React from "react";
 
-export const Footer = () => (
-    <div className="footer">
+export const Footer = (props: React.HTMLAttributes<HTMLElement>) => (
+    <footer className="footer" {...props}>
         <p>© 2024 danur, Inc. All rights reserved.</p>
-    </div>
+    </footer>
 );

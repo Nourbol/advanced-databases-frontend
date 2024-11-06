@@ -1,0 +1,18 @@
+.category-sidebar {
+    position: fixed;
+    z-index: 990;
+    top: 4.75rem;
+    left: 0;
+    height: 100vh;
+}
+
+.main {
+    height: 100vh;
+    background-color: var(--main-color);
+}
+
+.shadow-overlay {
+    filter: brightness(60%);
+    pointer-events: none;
+    overflow: hidden;
+}

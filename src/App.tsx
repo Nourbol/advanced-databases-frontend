@@ -7,10 +7,12 @@ function App() {
     return (
         <ProfileProvider>
             <Routes>
-                <Route path="/" element={<Layout><MainPage/></Layout>}/>
-                <Route path="/search" element={<Layout><SearchProductsPage/></Layout>}/>
-                <Route path="/product/:productId" element={<Layout><ProductPage/></Layout>} />
-                <Route path="/login" element={<Layout><LoginPage/></Layout>} />
+                <Route path="/" element={<Layout/>}>
+                    <Route path="/" element={<MainPage/>}/>
+                    <Route path="/search" element={<SearchProductsPage/>}/>
+                    <Route path="/product/:productId" element={<ProductPage/>}/>
+                    <Route path="/login" element={<LoginPage/>}/>
+                </Route>
             </Routes>
         </ProfileProvider>
     );
