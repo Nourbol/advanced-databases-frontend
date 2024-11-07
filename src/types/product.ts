@@ -16,5 +16,7 @@ export type Product = {
     category: {
         id: string;
         name: string;
-    }
+    };
+    likes: number;
+    liked: boolean;
 };

@@ -45,3 +45,15 @@
     padding: 0.5rem;
     border: 1px solid var(--neutral-color);
 }
+
+.inactive-like-button {
+    background-color: var(--secondary-color);
+    border: 1px solid var(--neutral-color);
+    color: var(--primary-color);
+}
+
+.active-like-button {
+    background-color: var(--primary-color);
+    border: none;
+    color: var(--main-color);
+}

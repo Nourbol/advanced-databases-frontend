@@ -13,7 +13,10 @@ export const Layout = () => {
     const [categories, setCategories] = useState<Category[]>([]);
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
-    const handleCategoryClick = (category: Category) => navigate(`/category/${category.id}`);
+    const handleCategoryClick = (category: Category) => {
+        navigate(`/category/${category.id}`);
+        setIsSidebarOpen(false);
+    };
 
     const handleMenuButtonClick = () => setIsSidebarOpen(prevState => !prevState);
 

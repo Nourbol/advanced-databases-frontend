@@ -31,7 +31,12 @@ export const UserIdentity = () => {
                 <img src={userIcon} alt={profile.fullName} onClick={handleUserLogoClick} className="header-user-logo"/>
                 {isUserCardOpen && (
                     <div className="user-card-wrapper" ref={ref}>
-                        <UserCard fullName={profile.fullName!} onLogout={handleLogout}/>
+                        <UserCard
+                            fullName={profile.fullName!}
+                            onLogout={handleLogout}
+                            onViewHistory={() => navigate('/user/history')}
+                            onViewFavorites={() => navigate('/user/favorites')}
+                        />
                     </div>
                 )}
             </>

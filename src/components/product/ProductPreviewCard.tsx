@@ -15,8 +15,8 @@ export const ProductPreviewCard = ({product, onClick = () => {}}: PropsType) => 
              onClick={() => onClick(product)}
         />
         <div className="product-preview-text-container">
-            <p className="product-preview-price" onClick={() => onClick(product)}>{product.price.toLocaleString()} KZT</p>
-            <p className="product-preview-title">{product.title}</p>
+            <p className="product-preview-price" onClick={() => onClick(product)}>{product.price.toLocaleString()} USD</p>
+            <div className="product-preview-title">{product.title}</div>
         </div>
         <Button>
             <img src={cartIcon} alt="cart-icon"/>

@@ -1,11 +1,14 @@
 import React from "react";
 import {Button} from "./Button.tsx";
-import {Icon} from "../icon/Icon.tsx";
-import likeIcon from "../../assets/like-icon.svg";
 import './Button.css';
+import {LikeIcon} from "../icon/LikeIcon.tsx";
 
-export const LikeButton = (props: React.ButtonHTMLAttributes<HTMLButtonElement>) => (
-    <Button className="button like-button" {...props}>
-        <Icon src={likeIcon} name="like icon" />
+type PropsType = {
+    isActive: boolean;
+} & React.ButtonHTMLAttributes<HTMLButtonElement>;
+
+export const LikeButton = ({ isActive, ...attributes}: PropsType) => (
+    <Button className={`button like-button ${isActive ? 'active-like-button' : 'inactive-like-button'}`} {...attributes}>
+        <LikeIcon />
     </Button>
 );

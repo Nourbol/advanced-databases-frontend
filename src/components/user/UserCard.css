@@ -4,6 +4,7 @@
     box-shadow: 0 1.25rem 0.75rem -1rem rgba(0,30,85,.1),0 0.5rem 1.5rem 1.125rem rgba(0,30,85,.05);
     min-width: 15rem;
     border-bottom-left-radius: 0.75rem;
+    background-color: var(--main-color);
 }
 
 .user-card > * {

@@ -1,12 +1,27 @@
 import {DetailedProductCard} from "../components/product/DetailedProductCard.tsx";
-import {useParams} from "react-router-dom";
+import {useNavigate, useParams} from "react-router-dom";
 import {useEffect, useState} from "react";
 import {Product} from "../types/product.ts";
-import {getProduct} from "../service/products.ts";
+import {getProduct, likeProduct, unlikeProduct} from "../service/products.ts";
 
 export const ProductPage = () => {
+    const navigate = useNavigate();
     const { productId } = useParams();
     const [product, setProduct] = useState<Product | null>(null);
+
+    const handleLike = () => {
+        if (productId) {
+            likeProduct(productId);
+        }
+    };
+
+    const handleUnlike = () => {
+        if (productId) {
+            unlikeProduct(productId);
+        }
+    };
+
+    const handleCategoryClick = (categoryId: string) => navigate(`/category/${categoryId}`);
 
     useEffect(() => {
         if (productId) {
@@ -14,13 +29,16 @@ export const ProductPage = () => {
         }
     }, [productId]);
 
-    if (!product) {
-        return null;
-    }
-
     return (
         <div className="page">
-            <DetailedProductCard {...product} />
+            {product && (
+                <DetailedProductCard
+                    {...product}
+                    onCategoryClick={handleCategoryClick}
+                    onLike={handleLike}
+                    onUnlike={handleUnlike}
+                />
+            )}
         </div>
     );
 };
